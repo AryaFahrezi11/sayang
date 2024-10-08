@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangat Buat Kamu!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 50px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: scaleUp 1.5s ease-out;
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            color: #ff6347;
+            font-size: 3em;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #333;
+            opacity: 0;
+            animation: fadeText 2s ease-in forwards;
+        }
+
+        @keyframes fadeText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .quote {
+            font-style: italic;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        .heart {
+            font-size: 2em;
+            color: #e74c3c;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .button {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e74c3c;
+        }
+
+        /* Animasi text baru */
+        .new-message {
+            font-size: 1.5em;
+            color: #2ecc71;
+            margin-top: 30px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.5s ease-in-out;
+        }
+
+        /* Aktifkan animasi setelah tombol di klik */
+        .show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hai, Sayang❤️</h1>
+        <p>覚えておいていただきたいのは、今日、あなたは素晴らしいということです。笑顔で元気を保つことを忘れないでください!</p>
+        <p class="quote">"Setiap hari adalah kesempatan baru untuk menjadi lebih baik dari kemarin."</p>
+        <p class="heart">❤️ Semangat terus ya, Rokhimatu Musiyam❤️</p>
+
+        <!-- Tombol untuk menampilkan pesan semangat baru -->
+        <button class="button" onclick="showMessage(1)">Klik untuk lebih semangat! 💪</button>
+        <button class="button" onclick="showMessage(2)">Klik untuk lebih tenang! 😊</button>
+        <a href="https://wa.me/6281770466244?text=Hai%20kamu!%20Semoga%20hari%20ini%20penuh%20semangat%20dan%20kebahagiaan%20ya!" target="_blank">
+            <button class="button">Klik Jika Kamu Butuh Aku! 🌟</button>
+        </a>
+
+        <!-- Pesan yang muncul setelah tombol di klik -->
+        <p id="new-message" class="new-message"></p>
+    </div>
+
+    <script>
+        function showMessage(type) {
+            var messageElement = document.getElementById('new-message');
+            if (type === 1) {
+                messageElement.textContent = "Kamu wanita tercantik yang pernah aq temui.percayalah..mwaaahhh....😘😘💕";
+            } else if (type === 2) {
+                messageElement.textContent = "Aq sangat sayang kamu, tetap bersama ku yaa. I LOVE U❤️❤️❤️";
+            } else if (type === 3) {
+                messageElement.textContent = "Kamu luar biasa, dan dunia akan menyadarinya!";
+            }
+            
+            // Tampilkan pesan dengan animasi
+            messageElement.classList.add('show');
+        }
+    </script>
+</body>
+</html>
